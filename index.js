@@ -25,12 +25,3 @@ app.listen(process.env.port, async () => {
   }
   console.log(`listening at port : ${process.env.port}`);
 });
-
-/*
-{
-  "title": "full stack",
-  "note": "learning full stack crud",
-  "category": "web dev",
-  "author": "sandy"
-}
-*/

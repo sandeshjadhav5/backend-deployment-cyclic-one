@@ -27,7 +27,7 @@ notesRouter.patch("/update/:id", async (req, res) => {
   const payload = req.body;
   const id = req.params.id;
   const note = await NoteModel.find({ _id: id });
-  const userID_in_note = note.userID;
+  const userID_in_note = note[0].userID;
   const userID_making_req = req.body.userID;
 
   try {
