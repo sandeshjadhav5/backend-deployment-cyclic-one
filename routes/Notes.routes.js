@@ -4,8 +4,13 @@ const { NoteModel } = require("../models/Notes.model");
 const notesRouter = express.Router();
 
 // G E T
-notesRouter.get("/", (req, res) => {
-  res.send("All Notes ");
+notesRouter.get("/", async (req, res) => {
+  try {
+    const notes = await NoteModel.find();
+    res.send(notes);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // P O S T
